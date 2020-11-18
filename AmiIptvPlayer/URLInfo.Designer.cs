@@ -40,9 +40,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 13);
+            this.label1.Size = new System.Drawing.Size(130, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "The URL for that track is:";
+            this.label1.Text = "Bu parçanın URL\'si şudur:";
             // 
             // btnOK
             // 
@@ -50,7 +50,7 @@
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(56, 23);
             this.btnOK.TabIndex = 1;
-            this.btnOK.Text = "Ok";
+            this.btnOK.Text = "Tamam";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
@@ -68,9 +68,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 110);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(261, 13);
+            this.label2.Size = new System.Drawing.Size(279, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Please copy that URL and set in your favourite player.";
+            this.label2.Text = "Lütfen URL\'yi kopyalayın ve favori oynatıcınızda ayarlayın.";
             // 
             // URLInfo
             // 

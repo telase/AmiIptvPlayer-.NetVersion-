@@ -47,10 +47,10 @@
             this.year});
             this.foundList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.foundList.HideSelection = false;
-            this.foundList.Location = new System.Drawing.Point(15, 27);
-            this.foundList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.foundList.Location = new System.Drawing.Point(11, 22);
+            this.foundList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.foundList.Name = "foundList";
-            this.foundList.Size = new System.Drawing.Size(568, 190);
+            this.foundList.Size = new System.Drawing.Size(427, 155);
             this.foundList.TabIndex = 6;
             this.foundList.UseCompatibleStateImageBehavior = false;
             this.foundList.DoubleClick += new System.EventHandler(this.foundList_DoubleClick);
@@ -69,50 +69,46 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(375, 226);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearch.Location = new System.Drawing.Point(281, 184);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(159, 28);
+            this.btnSearch.Size = new System.Drawing.Size(119, 23);
             this.btnSearch.TabIndex = 7;
-            this.btnSearch.Text = "Search again";
+            this.btnSearch.Text = "Tekrar Ara";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(85, 229);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Location = new System.Drawing.Point(64, 186);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(280, 22);
+            this.txtSearch.Size = new System.Drawing.Size(211, 20);
             this.txtSearch.TabIndex = 8;
             this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 233);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(8, 189);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 17);
+            this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Search:";
+            this.label1.Text = "Arama:";
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(376, 262);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExit.Location = new System.Drawing.Point(282, 213);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(159, 28);
+            this.btnExit.Size = new System.Drawing.Size(119, 23);
             this.btnExit.TabIndex = 10;
-            this.btnExit.Text = "Exit";
+            this.btnExit.Text = "Çıkış";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // FixIdent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(599, 300);
+            this.ClientSize = new System.Drawing.Size(449, 244);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSearch);
@@ -120,11 +116,10 @@
             this.Controls.Add(this.foundList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FixIdent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Fix Identification";
+            this.Text = "Kimliği Düzelt";
             this.Load += new System.EventHandler(this.FixIdent_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

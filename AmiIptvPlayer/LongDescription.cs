@@ -47,7 +47,7 @@ namespace AmiIptvPlayer
             lbStartTime.Text = prg.StartTime.ToShortTimeString();
             lbEndTime.Text = prg.StopTime.ToShortTimeString();
             logoPRG.LoadCompleted -= logoEPGLoaded;
-            lbRatings.Text = prg.Rating.Replace("Ratings:", "");
+            lbRatings.Text = prg.Rating.Replace("Puanlar:", "");
             foreach(string cat in prg.Categories)
             {
                 lbCategories.Text += cat + ",";

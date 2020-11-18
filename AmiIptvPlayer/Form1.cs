@@ -184,7 +184,7 @@ namespace AmiIptvPlayer
         {
             if (e.Error)
             {
-                MessageBox.Show("Error processing EPG, please check your url", "EPG ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("EPG işlenirken hata oluştu, lütfen URL'nizi kontrol edin", "EPG HATASI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 lbProcessingEPG.Invoke((System.Threading.ThreadStart)delegate
                 {
                     lbProcessingEPG.Text = "Error";
@@ -194,7 +194,7 @@ namespace AmiIptvPlayer
             {
                 lbProcessingEPG.Invoke((System.Threading.ThreadStart)delegate
                 {
-                    lbProcessingEPG.Text = "Loaded";
+                    lbProcessingEPG.Text = "Yüklendi";
                 });
             }
             
@@ -226,7 +226,7 @@ namespace AmiIptvPlayer
                         });
                         lbProcessingEPG.Invoke((System.Threading.ThreadStart)delegate
                         {
-                            lbProcessingEPG.Text = "Loading...";
+                            lbProcessingEPG.Text = "Yükleniyor...";
                         });
                         epgDB.ParseDB();
                     }
@@ -266,10 +266,10 @@ namespace AmiIptvPlayer
                     try
                     {
                         string chName = channel.TVGName.Length < 100 ? channel.TVGName : channel.TVGName.Substring(0, 99);
-                        Task<string> stats = Utils.GetAsync("http://amian.es:5085/stats?ctype=connected&app=net&chn=" + chName);
+                        Task<string> stats = Utils.GetAsync("" + chName);
                     } catch (Exception ex)
                     {
-                        Console.WriteLine("ERROR SENDING STATS");
+                        Console.WriteLine("HATA GÖNDERME İSTATİSTİKLERİ");
                     }
 
                     logoChannel.LoadCompleted -= logoLoaded;
@@ -485,7 +485,7 @@ namespace AmiIptvPlayer
                     + ":" + (player.Position.Seconds < 10 ? "0" + player.Position.Seconds.ToString() : player.Position.Seconds.ToString());
                 lbDuration.Invoke((System.Threading.ThreadStart)delegate
                 {
-                    lbDuration.Text = "Video Time: " + positionText + " / " + durationText;
+                    lbDuration.Text = "Video Zamanı: " + positionText + " / " + durationText;
                 });
                 
             }
@@ -593,7 +593,7 @@ namespace AmiIptvPlayer
 
                 cmbSubs.Items.Clear();
 
-                noneSub.Text = "None";
+                noneSub.Text = "Yok";
                 noneSub.Value = -1;
                 cmbSubs.Items.Add(noneSub);
             });
@@ -657,7 +657,7 @@ namespace AmiIptvPlayer
                 
             }
 
-            if (subConf != "none")
+            if (subConf != "yok")
             {
                 found = false;
                 foreach (TrackInfo tkinfo in tracksParser[TrackType.SUB])
@@ -798,7 +798,7 @@ namespace AmiIptvPlayer
             {
                 txtLoadCh.Invoke((System.Threading.ThreadStart)delegate
                 {
-                    txtLoadCh.Text = "Laoding channels... please wait a moment";
+                    txtLoadCh.Text = "Kanallar yükleniyor ... lütfen biraz bekleyin";
                     txtLoadCh.BringToFront();
                     txtLoadCh.Visible = true;
                 });
@@ -820,7 +820,7 @@ namespace AmiIptvPlayer
                 });
                 txtLoadCh.Invoke((System.Threading.ThreadStart)delegate
                 {
-                    txtLoadCh.Text = "Laoding channels... please wait a moment";
+                    txtLoadCh.Text = "Kanallar yükleniyor ... lütfen biraz bekleyin";
                     txtLoadCh.Visible = false;
                 });
             }).Start();
@@ -832,7 +832,7 @@ namespace AmiIptvPlayer
             {
                 txtLoadCh.Invoke((System.Threading.ThreadStart)delegate
                 {
-                    txtLoadCh.Text = "Laoding channels... please wait a moment";
+                    txtLoadCh.Text = "Kanallar yükleniyor ... lütfen biraz bekleyin";
                     txtLoadCh.BringToFront();
                     txtLoadCh.Visible = true;
                 });
@@ -856,7 +856,7 @@ namespace AmiIptvPlayer
                 });
                 txtLoadCh.Invoke((System.Threading.ThreadStart)delegate
                 {
-                    txtLoadCh.Text = "Laoding channels... please wait a moment";
+                    txtLoadCh.Text = "Kanallar yükleniyor ... lütfen biraz bekleyin";
                     txtLoadCh.Visible = false;
                 });
             }).Start();
@@ -1018,7 +1018,7 @@ namespace AmiIptvPlayer
         private void logoEPG_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.logoEPG, "Click for more details");
+            tt.SetToolTip(this.logoEPG, "Daha fazla detay için tıklayın");
         }
 
         private void txtFilter_KeyPress(object sender, KeyPressEventArgs e)
